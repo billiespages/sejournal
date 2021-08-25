@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name = "Description" content="self esteem journal">
+<meta name="Keywords" content="self esteem, daily journal, self esteem journal, mood tracker, mood journal, mood, meditation, meditate, mantra, positive thoughts, self awareness">
+<meta name="Author" content="Billie Cochell">
+<meta name="Reply-to" content="billie.child79@gmail.com">
+
+<title>Mood Tracker</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="/journal/css/sitewide.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Gruppo" />
+
+	</head>
+
+    
+<body>
+	<a name="top"></a>
+	
+    <div class="row">
+        <div class="col-md-9 col-xs-10">
+            <ul>
+                <li><a href="http://www.billiespages.com">Portfolio Home</a></li>
+                <li><a href="/journal/pages/sejhome.html">Home</a></li>
+                <li><a href="../pages/questions.html">Questions of the Day</a></li>
+                <li><a class="active" href="../pages/mtracker.html">Mood Tracker</a></li>
+                <li><a href="../pages/journal.html">Self Esteem Journal</a></li>
+                <li><a href="../pages/meditate.html">Meditation</a></li>
+            </ul>
+		</div>
+	
+		<div class="col-md-3 col-xs-2">
+			<button onclick="document.getElementById('id01').style.display='block'"
+			style="width:auto;">Login</button>
+				
+			<div id="id01" class="modal">
+				<form class="modal-content-lg animate" action="/action_page.php">
+					<div class="imgcontainer">
+						<span onclick="getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					</div>
+					<h2 align="center">Login</h2>
+					<div class="container">
+						<label><strong>Username</strong></label>
+						<input type="text" placeholder="Enter Email" name="uname" required>
+									  
+						<label><strong>Password</strong></label>
+						<input type="password" placeholder="Enter Password" name="psw" required>
+									  
+						<button type="submit">Login</button>
+						<input type="checkbox" checked="checked">Remember Me
+					</div>
+					<div class="container" style="background-color: #1BA72F;">
+						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="canclbtn">Cancel</button>
+							<span class="psw">Forgot<a href="#"> password? </a></span>
+					</div>			  
+				</form>
+			</div>
+				
+			<button onclick="document.getElementById('id02').style.display='block'"
+			style="width:auto;">Register</button>
+				
+			<div id="id02" class="modal">
+				<form class="modal-content-lg" method="post" action="#">
+					<div class="imgcontainer">
+						<span onclick="getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+					</div>
+					<h2 align="center">Register</h2>
+					<label>Name: </label>
+					<input type="text" placeholder="Enter Your Name" name="dname" id="name" required>
+					<label>Email: </label>
+					<input type="text" placeholder="Enter Your Email" name="demail" id="email" required>
+					<label>Password: </label>
+					<input type="password" placeholder="Enter Your Password" name="password" id="password" required>
+					<label>Confirm Password: </label>
+					<input type="password" placeholder="Confirm Password" name="cpassword" id="cpassword" required>
+                    <br> 
+                    <button type="submit">Register</button>
+					<button type="button" onclick="document.getElementById('id02').style.display='none'" class="canclbtn">Cancel</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+    <div class="clearfix"></div>
+    
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-6">	
+                <h1 class="align-center">Mood Tracker</h1>			
+                <table>
+                    <tbody>
+                        <form action="sejournal.php" method="post" name="post to journal" id="post to journal">
+                            <tr>
+                                <td><b>Date: </b><input type="date" id="datepicker" cols="20"></td>
+                            </tr>
+                                
+                            <tr>
+                                <td>
+                                    <p><label for="morning" class="label"><b><i>Morning</i></b></label><br>
+                                        <select name="m1">
+                                        <option value="null">Select One</option>
+                                        <option value="aggravated">Aggravated</option>
+                                        <option value="anxious">Anxious</option>
+                                        <option value="calm">Calm</option>
+                                        <option value="content">Content</option>
+                                        <option value="depressed">Depressed</option>
+                                        <option value="excited">Excited</option>
+                                        <option value="grumpy">Grumpy</option>
+                                        <option value="happy">Happy </option>
+                                        <option value="mad">Mad</option>
+                                        <option value="optimistic">Optimistic</option>
+                                        <option value="pessimistic">Pessimistic</option>
+                                        <option value="sad">Sad</option>
+                                        <option value="stress">Stressed</option>
+                                        </select>
+                                        <br>
+                                        <textarea name="morn" rows="5" cols="75"></textarea>
+                                    </p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <p><label for="afternoon" class="label"><b><i>Afternoon</i></b></label><br>
+                                        <select name="m2">
+                                        <option value="null">Select One</option>
+                                        <option value="aggravated">Aggravated</option>
+                                        <option value="anxious">Anxious</option>
+                                        <option value="calm">Calm</option>
+                                        <option value="content">Content</option>
+                                        <option value="depressed">Depressed</option>
+                                        <option value="excited">Excited</option>
+                                        <option value="grumpy">Grumpy</option>
+                                        <option value="happy">Happy </option>
+                                        <option value="mad">Mad</option>
+                                        <option value="optimistic">Optimistic</option>
+                                        <option value="pessimistic">Pessimistic</option>
+                                        <option value="sad">Sad</option>
+                                        <option value="stress">Stressed</option>
+                                        </select>
+                                        <br>
+                                        <textarea name="afnoon" rows="5" cols="75"></textarea>
+                                    </p>
+                                </td>
+                            </tr>
+                                
+                            <tr>
+                                <td>
+                                    <p><label for="evening" class="label"><b><i>Evening</i></b></label><br>
+                                        <select name="m3">
+                                        <option value="null">Select One</option>
+                                        <option value="aggravated">Aggravated</option>
+                                        <option value="anxious">Anxious</option>
+                                        <option value="calm">Calm</option>
+                                        <option value="content">Content</option>
+                                        <option value="depressed">Depressed</option>
+                                        <option value="excited">Excited</option>
+                                        <option value="grumpy">Grumpy</option>
+                                        <option value="happy">Happy </option>
+                                        <option value="mad">Mad</option>
+                                        <option value="optimistic">Optimistic</option>
+                                        <option value="pessimistic">Pessimistic</option>
+                                        <option value="sad">Sad</option>
+                                        <option value="stress">Stressed</option>
+                                        </select>
+                                        <br>
+                                        <textarea name="evning" rows="5" cols="75"></textarea>
+                                    </p>
+                                </td>
+                            </tr>
+                                
+                            <tr>
+                                <td>
+                                    <p><label for ="sleep" class="label"><b><i>Quality of Sleep Last Night:</i></b></label> <br>
+                                        <select name="slp">
+                                        <option value="null">Select One</option>
+                                        <option value="bta">Better Than Average</option>
+                                        <option value="ssdd">Average</option>
+                                        <option value="ba">Below Average</option>
+                                        <option value="noslp">No sleep</option>
+                                        </select>
+                                        <br>
+                                        <textarea name="slpnts" rows="5" cols="75"></textarea>
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <br>
+
+                            <tr>
+                                <td>
+                                    <input type="submit" name="submit" id="submit" value="Post to Journal" onclick="formdata()"/>
+                                </td>
+                            </tr>
+                        </form>
+                    </tbody>
+                </table>
+		    </div>
+             <div class="col-md-3"></div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <hr>
+
+        <div class="row">
+            <div class="footer" align="center">
+                <p>Billies Pages LLC 2020</p>
+                <a href="mailto:billie.child79@gmail.com">billie.child79@gmail.com</a> <br>
+            </div>
+        </div>
+        
+    </div>
+
+	<script>
+			
+			$( function() {
+				$ ( "#datepicker" ).datepicker({
+					changeMonth: true,
+					changeYear: true
+				});
+			});
+				
+				$("form").submit(function(){
+					alert("Posted to Journal");
+				});
+			
+		</script>
+
+<script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</body>
+</html>
